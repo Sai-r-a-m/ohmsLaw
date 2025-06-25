@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+  
+<head>
+  <meta charset="UTF-8">  
+  <title>OHM'S LAW</title>
+  <style>
+  .button{
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 45px;
+  }
+  .control{
+    background-color:teal;
+    background-color:#60E1E0;
+    background-color:#023e8a;
+    padding: 50px 20px;
+    height: 400px;
+    width: 250px;
+    position: relative;
+    margin-top: 75px;
+    margin-left: 50px;
+  }
+  .wrap {display: flex; flex-direction: "row"; }  
+  
+   </style>
+</head>
+<body>
+
+<div class=wrap>
+  <div class="control">
+      <strong style="font-weight: bold; font-size: 32pt;color:white;"><u>CONTROLS</u>
+      </strong>
+      <br><br>
+      <button class="button" style="background-color:black;color:white;padding: 15px 39px;"
+      onclick="location.href='graph.html'"><b>
+        GRAPH</b></button><br>
+
+      <button class="button" style="background-color:black;color:white;padding: 15px 35px;"
+      onclick="location.href='project_theory.html'"><b>
+        THEORY</b></button><br>
+
+      <button class="button" style="background-color:black;color: aliceblue;"
+      onclick="location.href='index.html'">
+      <b>RESTART</b>
+      </button><br><br><br><br>
+
+      
+      <b style="color: aliceblue;">VOLTAGE</b>
+      <input id="vslider" type="range" min="1" max="100" oninput="vsliderChange(this.value); v=parseInt(this.value);">
+      <output id="vsliderVal" style="color: aliceblue;">50</output>
+      <br><br>
+  </div>
+  <canvas id="CANVAS" width="1100" height="300" position="relative"></canvas>
+</div>
+
+<script>
+    function vsliderChange(val) {
+        document.getElementById('vsliderVal').innerHTML = val;
+    }
+</script>
+<script src="./script.js"></script>
+</body>
+</html>
